@@ -1,0 +1,206 @@
+<div id="header" class="dont_print">
+<div class="top_menu">
+<ul id="nav" class="sf-menu"> 
+<li class="top"><a href="index.php">Home</a></li>
+<li class="top" ><a href="#">About Us<img alt="" src="images/arrow.gif" class="border_0" style="position: relative; top: -2px;" /> </a>
+<ul class="drop"> 
+<li><a href="mission.php">Mission</a></li> 
+<li><a href="contact.php">Contact Us</a></li> 
+<li><a href="donate.php">Donate</a></li> 
+</ul> 
+</li> 
+
+<li class="top" style="font-size:13pt;"><a href="#">The Conference<img alt="" src="images/arrow.gif" class="border_0" style="position: relative; top: -2px;" /></a>
+<ul class="drop"> 
+<li><a href="#">Schedule</a></li> 
+<li><a href="concert.php">Concert</a></li> 
+<li><a href="speakers.php">Speakers</a></li> 
+<li><a href="pictures.php">Photos</a></li> 
+</ul> 
+</li> 
+<li id="" class="top"><a href="#">Resources<img alt="" src="images/arrow.gif" class="border_0" style="position: relative; top: -2px;" /></a>
+<ul class="drop"> 
+<li><a href="links.php">Links</a></li> 
+<li><a href="planner_login.php">Planner Login</a></li> 
+<li><a style="font-size:11pt;" href="#">Subscribe to E-News</a></li> 
+
+</ul>
+</li> 
+<li class="top"><a href="promote.php">Promote</a></li>
+<li class="top_orange"><a href="register.php">Register</a></li>
+</ul>
+
+</div></div>
+<!--End of Header --> 
+
+<script type="text/javascript" src="images/slides/sequence.html.glimmer.js"></script>
+<div id="text_background"><div id="body_text" class="fade_in">
+<div class="slideshow">
+<ul class="buttons" >
+<li class="active" id="button1"><a href="#image1" title="">1</a></li>
+<li id="button2"><a href="#image2" title="">2</a></li>
+<li id="button3"><a href="#image3" title="">3</a></li>
+
+</ul>
+<ul class="slides">
+<li style="visibility:visible" class="slide" id="image1">
+<a href="/location.php"><img alt="" src="images/slides/images/everest_slide.png" /></a></li>
+<li class="slide" id="image2">
+<a href="promote.php"><img alt="" src="images/slides/images/promote_slide.png" /></a></li>
+<li class="slide" id="image3">
+<a href="concert.php"><img alt="" src="images/slides/images/concert_slide.png" /></a></li>
+
+</ul>
+</div>
+
+And here is the css for the slide show. 
+/* begin: slideshow */
+.slideshow {
+
+position:relative;
+padding:0;
+margin:0;
+left:-19px;
+
+}
+.slideshow a img {
+border:none;
+}
+.slideshow li.slide {
+list-style-type:none;
+}
+.slideshow .slides {
+height:260px;
+margin:0;
+
+
+
+}
+.slideshow .slides li.slide {
+visibility:hidden;
+position:absolute;
+z-index:1;
+left:5px;
+top:0;
+}
+
+Finally this is the css for the drop down. 
+.sf-menu, .sf-menu ul { 
+padding: 0; 
+margin: 0; 
+list-style: none; 
+line-height:28px; 
+z-index:101;
+} 
+
+.sf-menu a { 
+display: block; 
+width: 149.37px; 
+} 
+
+.sf-menu li { 
+background-position: center; 
+float: left; 
+width: 149.37px;
+font-family: verdana; 
+font-size: 15pt; 
+font-weight: bold; 
+color: #FFFFFF; 
+} 
+.smaller_text{
+font-size:13pt;
+}
+
+.sf-menu li ul { 
+position:absolute;
+width:149.37px; 
+left: -999em; 
+background: rgb(72, 167, 203);
+background: rgba(72, 167, 203, 0.85);
+-webkit-transition: opacity .10s linear 0s, height .10s linear 0s;
+-moz-transition: opacity .10s linear 0s, height .10s linear 0s;
+-o-transition: opacity .10s linear 0s, height .10s linear 0s;
+transition: opacity .10s linear 0s, height .10s linear 0s; 
+
+} 
+
+.sf-menu li:hover ul,.sf-menu li.sfhover ul{ 
+left:auto;
+} 
+.top { 
+background-image: url('images/backgrounds/menu_background.png'); 
+background-repeat: repeat-x; 
+background-position: center; 
+height: 30px; 
+font-size: 15pt; 
+position:relative;
+} 
+
+.top a:link, .top a:visited{
+color: #FF9933;
+text-decoration: none;
+}
+.top a:hover {
+color: #FF9933;
+text-decoration:none;
+-webkit-transition: background-color .7s ease; 
+-moz-transition: background-color .7s ease; 
+-o-transition: background-color .7s ease; 
+transition: background-color .5s ease; 
+
+}
+
+.top:hover, .ie {
+color: #FF9933;
+background-image: url('images/backgrounds/menu_selected.png');
+background-repeat: repeat-x;
+background-position: center;
+}
+
+.top_orange {
+background-image: url('images/backgrounds/menu_background_orange.png'); 
+background-repeat: repeat-x; 
+background-position: center; 
+height: 30px; 
+position:relative;
+}
+.top_orange:hover, .ie_orange {
+background-image: url('images/backgrounds/menu_background_orange_selected.png');
+background-repeat: repeat-x;
+background-position: center;
+}
+.top_orange a:link {
+color: #FFFFFF;
+text-decoration: none;
+}
+.top_orange a:visited {
+color: #FFFFFF;
+text-decoration: none;
+}
+
+.drop li {
+border-style: solid;
+font-size:13pt;
+border-width: 0px 0px 1px 0px;
+border-color: #C0C0C0;
+height: 30px;
+z-index: 100;
+}
+
+.drop a:hover {
+background-color: #00678E;
+height: 100%;
+width: 100%;
+color: #FF9933;
+text-decoration:none
+}
+.drop li:last-child{
+border-bottom-width:0px;
+}
+
+#nav a {
+text-align: center;
+}
+#nav {
+z-index:105;
+}
